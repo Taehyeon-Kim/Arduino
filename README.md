@@ -1,8 +1,8 @@
-# arduino-exercise
+# skku-arduino
 
-Arduino exercises in physical computing class.
+SKKU Physical Computing Course
 
 ### week4
 
-- Use potentiometer
-- Use TMP-36 sensor
+- To-use potentiometer
+- To-use TMP-36 sensor
