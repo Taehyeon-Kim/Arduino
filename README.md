@@ -1,6 +1,6 @@
 # skku-arduino
 
-SKKU Physical Computing Course
+□ SKKU Physical Computing Course with C Language.
 
 ### week4
 
