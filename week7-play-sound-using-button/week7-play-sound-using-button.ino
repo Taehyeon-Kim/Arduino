@@ -23,14 +23,52 @@ void setup() {
   pinMode(BUTTON_E, INPUT_PULLUP);
   pinMode(BUTTON_F, INPUT_PULLUP);
   pinMode(BUTTON_G, INPUT_PULLUP);
+
+  Serial.begin(9600); //serial init
 }
 
 void loop() {
-  while(!digitalRead(BUTTON_C)) tone(SPEAKER, NOTE_C);
-  while(!digitalRead(BUTTON_D)) tone(SPEAKER, NOTE_D);
-  while(!digitalRead(BUTTON_E)) tone(SPEAKER, NOTE_E);
-  while(!digitalRead(BUTTON_F)) tone(SPEAKER, NOTE_F);
-  while(!digitalRead(BUTTON_G)) tone(SPEAKER, NOTE_G);
+//  int times = 0;
+//  unsigned int times = 0;//  unsigned int times = 0;
+  char notes = '\0'; // character initialize
+  unsigned long times = 0; // 반복 시 오류 없이 동작 
+
+  while(!digitalRead(BUTTON_C)) {
+    times++;
+    tone(SPEAKER, NOTE_C);  
+    notes = 'C';
+  }
+  while(!digitalRead(BUTTON_D)) {
+    times++;
+    tone(SPEAKER, NOTE_D);
+    notes = 'D';  
+  }
+  while(!digitalRead(BUTTON_E)) {
+    times++; 
+    tone(SPEAKER, NOTE_E);  
+    notes = 'E';
+  }
+  while(!digitalRead(BUTTON_F)) {
+    times++;
+    tone(SPEAKER, NOTE_F);  
+    notes = 'F';
+  }
+  while(!digitalRead(BUTTON_G)) {
+    times++;
+    tone(SPEAKER, NOTE_G);  
+    notes = 'G';
+  }
+  
+  // print
+  if(times){
+    // %c, %d 불가 
+    Serial.print("Note:\t");
+    Serial.print(notes);
+    Serial.print("\t\t");
+    Serial.print("Times:\t");
+    Serial.println(times);
+  }
+  
 
   noTone(SPEAKER);
 }
