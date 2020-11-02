@@ -30,3 +30,10 @@
 - one LED control: 0, 1 toggle해서 led control, 0과 1을 시리얼 통신을 통해서 값 전달)
 - three LED control: 1개를 사용하는 예제 좀 더 심화
 - protocol 예제: cmd수에 따라서 parameter 값 조정 
+
+### week9 (LCD 디스플레이 사용, 16개의 pin중 12개의 pin사용)
+
+- lcd test: lcd 연결 테스트, 생각지도 못한 에러 많이 발생 (브래드보드, 선 문제 등), 데이터 핀 4개만 사용
+- lcd print skku: skku 문자 출력 예제, 행 바뀌면서 이동, 교수님 코드 참고(사진)
+- lcd animation: 애니메이션 효과
+- lcd progress bar: 프로그래스바 표현 예제, 애니메이션 효과 이용
